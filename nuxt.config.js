@@ -1,4 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
+import fa from 'vuetify/es5/locale/fa'
+import en from 'vuetify/es5/locale/en'
 
 export default {
   mode: 'universal',
@@ -6,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: 'طوطیکو | سفارش ترجمه آنلاین',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -17,7 +19,7 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', href: '/images/application/tootiko-alone.png' }]
   },
   /*
    ** Customize the progress-bar color
@@ -26,7 +28,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/css/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -57,9 +59,12 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
+    lang: {
+      locales: { en, fa },
+      current: 'fa'
+    },
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,

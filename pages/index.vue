@@ -1,75 +1,153 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
+  <div>
+    <v-row
+      style="height: 91vh; background: url('/images/application/hero-small.jpg') no-repeat center center; background-size:cover !important"
+      class="mt-n5 justify-center"
+    >
       <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a href="https://vuetifyjs.com" target="_blank"> documentation </a>.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a href="https://chat.vuetifyjs.com/" target="_blank" title="chat">
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a href="https://nuxtjs.org/" target="_blank">
-            Nuxt Documentation
-          </a>
+        <v-row class="text-center justify-center align-center mt-12">
+          <v-img
+            max-width="250"
+            src="/images/application/tootiko-Logo.png"
+          ></v-img>
+        </v-row>
+        <h1 class="display-1 text-center" style="line-height: 76px">
+          به سامانه سفارش آنلاین ترجمه
+          <span class="font-weight-bold" style="color: forestgreen"
+            >طوطیکو</span
+          >
+          خوش آمدید
           <br />
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank">
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+        </h1>
+        <v-btn color="green darken-3 text-center" dark large class="mt-3">
+          ثبت سفارش ترجمه
+        </v-btn>
+      </div>
+    </v-row>
+
+    <v-container>
+      <v-row>
+        <v-col cols="12" md="3" class="text-center">
+          <v-tooltip bottom color="purple">
+            <template v-slot:activator="{ on }">
+              <div v-on="on">
+                <v-row justify="center">
+                  <v-img
+                    max-width="150"
+                    src="/images/application/step1.png"
+                  ></v-img>
+                </v-row>
+                سفارش ترجمه ات رو ثبت کن
+              </div>
+            </template>
+            <span
+              >روی دکمه ثبت سفارش کلیک کن و فایل یا لینک ترجمه ات رو همراه با
+              اطلاعات سفارش به ما بده</span
+            >
+          </v-tooltip>
+        </v-col>
+        <v-col cols="12" md="3" class="text-center">
+          <v-tooltip bottom color="purple">
+            <template v-slot:activator="{ on }">
+              <div v-on="on">
+                <v-row justify="center">
+                  <v-img
+                    max-width="150"
+                    src="/images/application/step2.png"
+                  ></v-img>
+                </v-row>
+                منتظر شمارش کلمات و مترجم باش
+              </div>
+            </template>
+            <span
+              >چند دقیقه منتظر بمون تا کارشناسا کلمات رو شمارش کنن و همینطور یه
+              مترجم مناسب با متن انتخاب کنن</span
+            >
+          </v-tooltip>
+        </v-col>
+        <v-col cols="12" md="3" class="text-center">
+          <v-tooltip bottom color="purple">
+            <template v-slot:activator="{ on }">
+              <div v-on="on">
+                <v-row justify="center">
+                  <v-img
+                    max-width="150"
+                    src="/images/application/step3.png"
+                  ></v-img>
+                </v-row>
+                به راحتی پرداخت کن
+              </div>
+            </template>
+            <span>به راحتی با هر کارت عضو شتابی، هزینه مترجم رو پرداخت کن</span>
+          </v-tooltip>
+        </v-col>
+        <v-col cols="12" md="3" class="text-center">
+          <v-tooltip bottom color="success">
+            <template v-slot:activator="{ on }">
+              <div v-on="on">
+                <v-row justify="center">
+                  <v-img
+                    max-width="150"
+                    src="/images/application/step4.png"
+                  ></v-img>
+                </v-row>
+                فایل ترجمه ات رو تحویل بگیر
+              </div>
+            </template>
+            <span
+              >بعد از مهلتی که برای مترجم انتخاب کردی ، فایل ترجمه شده ات رو
+              تحویل بگیر و طوطیکو رو به دوستات معرفی کن!</span
+            >
+          </v-tooltip>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container>
+      <v-row align="center">
+        <v-col cols="12" md="6">
+          <v-card shaped class="mx-auto">
+            <v-img src="/images/application/main-page-find-jobs.svg"></v-img>
+            <v-card-title>
+              کسب درآمد از ترجمه
+            </v-card-title>
+            <v-card-subtitle>
+              در صورتی که در زمینه ترجمه متخصص هستید، در آزمون ورودی طوطیکو شرکت
+              کنید و سپس با ترجمه‌کردن کسب درآمد کنید.
+            </v-card-subtitle>
+            <v-card-actions>
+              <v-btn color="purple" text>
+                ترجمه
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-card shaped class="mx-auto">
+            <v-img src="/images/application/main-page-connection.svg"></v-img>
+            <v-card-title>
+              ترجمه مقالات خود را به حرفه‌ای‌ها بسپارید.
+            </v-card-title>
+            <v-card-subtitle>
+              مقالات و متون انگلیسی خود را به راحتی به مترجمین متخصص در حوزه
+              مربوطه بسپارید.
+            </v-card-subtitle>
+            <v-card-actions>
+              <v-btn color="purple" text>
+                ثبت نام | ورود
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
 export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
+  name: 'Index'
 }
 </script>
+
+<style scoped></style>
